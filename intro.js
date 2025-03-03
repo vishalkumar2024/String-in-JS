@@ -40,3 +40,14 @@ console.log(str.replaceAll("i","z"));
 let obj={name:"vishal"};
 console.log(typeof JSON.stringify(obj))
 
+
+//given array of names count the number of names starting with n or N
+
+let name = ["rajesh", "nayan", "Nisha", "aditya"];
+count = 0;
+for (let p = 0; p < name.length; p++) {
+    if (name[p][0] == 'N' || name[p][0] == 'n') {
+        count += 1;
+    }
+}
+console.log("name start from n : ", count);

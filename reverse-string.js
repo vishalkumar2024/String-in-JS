@@ -1,15 +1,26 @@
 function reverseString(s) {
+    let charArr = [];      //SC=O(n)
+    for (let char of s) {    //TC=O(n)
+        charArr.push(char);
+    }
+
     let i = 0;
-    let j = s.length-1;
-    while (i <= j) {
-        let temp = s[i];
-        s[i] = s[j];
-        s[j] = temp;
+    let j = s.length - 1;
+    while (i <= j) {           //TC=O(n)
+        let temp = charArr[i];
+        charArr[i] = charArr[j];
+        charArr[j] = temp;
         i++;
         j--;
     }
-    return s
+
+    let res = ""                    //SC=O(n)
+    for (let val of charArr) {   //TC=O(n)
+        res += val;
+    }
+    return res;
 }
 
-let s="ask";
+let s = "ask";
 console.log(reverseString(s));
+
