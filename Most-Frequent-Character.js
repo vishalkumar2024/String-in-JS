@@ -1,6 +1,7 @@
 function getMaxOccuringChar(s) {
+    let n=s.length;
     let obj = {};
-    for (let i = 0; i < s.length; i++) {
+    for (let i = 0; i < n; i++) {  //TC=O(n)
         if (obj[s[i]] == undefined) {
             obj[s[i]] = 1;
         }
@@ -8,7 +9,6 @@ function getMaxOccuringChar(s) {
             obj[s[i]]++;
         }
     }
-    console.log(obj)
     let max = 0;
     let value = '~';
     for (let key in obj) {
@@ -16,10 +16,10 @@ function getMaxOccuringChar(s) {
             max = obj[key];
             value = key;
         }
-
     }
     return value;
 }
 
 let s = "oaarqxxvbq"
 console.log(getMaxOccuringChar(s))
+
