@@ -1,9 +1,13 @@
-function Reverse(str){
-   let ReverseString="";
-   for(let i=str.length-1;i>=0;i--){
-     ReverseString+=str[i];
-   }
-   return ReverseString;
+function Reverse(str) {
+    let n = str.length;
+    let ReverseString = "";
+    for (let i = n - 1; i >= 0; i--) {
+        ReverseString += str[i];
+    }
+    return ReverseString;
 }
-str="Hello World";
+str = "Hello World";
 console.log(Reverse(str));
+
+// TC = O(n)
+// SC=O(n)

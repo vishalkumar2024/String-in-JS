@@ -1,7 +1,9 @@
 function reverseString(str) {
-    
+
+    // Convert string to an array (since strings are immutable in JS)
     let arr = str.split('');
     
+    // reverse the array
     arr.reverse();
     
     // Convert array back to string
@@ -11,5 +13,5 @@ function reverseString(str) {
 let s = "Hello World";
 console.log(reverseString(s));
 
-// TC=O(n)+O(n)+O(n)
-// SC=O(n)+O(n)
+// TC=O(n)
+// SC=O(1)
