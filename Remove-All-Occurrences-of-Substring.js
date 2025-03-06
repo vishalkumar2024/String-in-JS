@@ -1,3 +1,5 @@
+// leetcode 1910
+
 function removeOccurrence(str, part) {
     let n = str.length;
     function remove(str, part) {
