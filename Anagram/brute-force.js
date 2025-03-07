@@ -1,34 +1,30 @@
+// // Leetcode 242
 function areAnagrams(s1, s2) {
-    if (s1.length != s2.length) {
-        return false;
-    }
-    let map = new Map();  // SC=O(n)
-    for (let i = 0; i < s1.length; i++) {  //TC=O(n)
-        if (map.has(s1[i])) {
-            map.set(s1[i], map.get(s1[i]) + 1);
-        } else {
-            map.set(s1[i], 1);
-        }
-    }
-    console.log(map)
+    let n = s1.length;
+    let str1 = s1.split(""); // TC=O(n)
+    str1.sort();  // TC=O(nlogn)
+    console.log(str1)
 
-    let res = true;
-    for (let i = 0; i < s2.length; i++) { // TC=O(n)
-        if (map.has(s2[i])) {
-            if (map.get(s2[i]) === 1) {
-                map.delete(s2[i]);
-            }
-            else  {
-                map.set(s2[i], map.get(s2[i]) - 1);
-            }
-            res = true;
-        }
-        else {
+    let str2 = s2.split("");  // TC=O(n)
+    str2.sort();  // TC=O(nlogn)
+    console.log(str2)
+
+    for (let i = 0; i < n; i++) {  //TC=O(n)
+        if (str1[i] != str2[i]) {
             return false;
         }
     }
-    return res;
+    return true;
 }
-let s1 = "aab";
-let s2 = "abb";
-console.log(areAnagrams(s1, s2));  
+let s1 = "ba", s2 = "ab"
+console.log(areAnagrams(s1, s2));
+
+// // TC=O(n)
+// // SC=O(n)
+
+// let str="javascript";
+// let s=str.split("");
+// // console.log()
+// console.log(s.sort())
+
+// console.log("a"=="a");
