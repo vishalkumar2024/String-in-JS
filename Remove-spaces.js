@@ -13,7 +13,8 @@ function modify(s) {
 let s = "vishal Kumar soni";
 console.log(modify(s));
 
-//TC=O(n)
+// TC=O(n)
+// SO=O(n)
 
 
 // function modify(s) {
@@ -21,3 +22,4 @@ console.log(modify(s));
 // }
 // let s = "Vishal Kumar Soni";
 // console.log(modify(s))
+
