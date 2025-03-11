@@ -14,4 +14,4 @@ let s = "Hello World";
 console.log(reverseString(s));
 
 // TC=O(n)
-// SC=O(1)
+// SC=O(n)

@@ -1,11 +1,11 @@
 // // Leetcode 242
 function areAnagrams(s1, s2) {
     let n = s1.length;
-    let str1 = s1.split(""); // TC=O(n)
+    let str1 = s1.split(""); //TC=O(n) //SC=O(n)
     str1.sort();  // TC=O(nlogn)
     console.log(str1)
 
-    let str2 = s2.split("");  // TC=O(n)
+    let str2 = s2.split("");  //TC=O(n) //SC=O(n)
     str2.sort();  // TC=O(nlogn)
     console.log(str2)
 
@@ -19,12 +19,5 @@ function areAnagrams(s1, s2) {
 let s1 = "ba", s2 = "ab"
 console.log(areAnagrams(s1, s2));
 
-// // TC=O(n)
-// // SC=O(n)
-
-// let str="javascript";
-// let s=str.split("");
-// // console.log()
-// console.log(s.sort())
-
-// console.log("a"=="a");
+// // TC=O(nlogn) - O(n)+O(nlogn)+O(n)+O(nlogn)+O(n)
+// // SC=O(n)    - O(n)+O(n)

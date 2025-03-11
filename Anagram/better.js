@@ -1,3 +1,4 @@
+// Leetcode 242
 function areAnagrams(s1, s2) {
     if (s1.length != s2.length) {
         return false;
@@ -10,7 +11,6 @@ function areAnagrams(s1, s2) {
             map.set(s1[i], 1);
         }
     }
-    console.log(map)
 
     let res = true;
     for (let i = 0; i < s2.length; i++) { // TC=O(n)
@@ -18,7 +18,7 @@ function areAnagrams(s1, s2) {
             if (map.get(s2[i]) === 1) {
                 map.delete(s2[i]);
             }
-            else  {
+            else {
                 map.set(s2[i], map.get(s2[i]) - 1);
             }
             res = true;
@@ -31,4 +31,7 @@ function areAnagrams(s1, s2) {
 }
 let s1 = "aab";
 let s2 = "abb";
-console.log(areAnagrams(s1, s2));  
+console.log(areAnagrams(s1, s2));
+
+// TC=O(n)
+// SC=O(n)
