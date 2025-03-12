@@ -12,7 +12,7 @@ function reverse(s) {
     }
     return str.join(" ");
 }
-s = "a good   example"
+s = "a good   example";
 // Output: "example good a"
 console.log(reverse(s));
 

@@ -1,3 +1,5 @@
+// Leetcode- 443
+
 function Compression(s) {
     let n = s.length;
     let count = 0;
@@ -10,21 +12,23 @@ function Compression(s) {
             map[s[i]]++;
         }
     }
-    let ele = 0;
-    for (let key in map) {
-        if(map[key]===1){
-          count++;
+    for (let key in map) {  //TC=O(n)
+        if (map[key] === 1) {
+            count++;
         }
-        if(map[key]>1 && map[key]<=9){
-          count+=2;
+        if (map[key] > 1 && map[key] <= 9) {
+            count += 2;
         }
-        // ele++;
+        // If a char. occurs more than 9 times it will take 3 places
         if (map[key] > 9) {
-            count+=3;
+            count += 3;
         }
-        // count += (2 * ele);
     }
     return count;
 }
 let s = ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"];
+// Compressed:- ab2c10
 console.log(Compression(s));
+
+// TC=O(n)+O(n) ~ O(n)
+// SC =O(n)
