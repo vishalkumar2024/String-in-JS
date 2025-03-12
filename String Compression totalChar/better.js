@@ -19,9 +19,12 @@ function Compression(s) {
                     j++;
                 }
             }
-            if ((j - i) >= 9) {
+            if ((j - i) === 9) {
                 console.log("object")
                 count += 1;
+                j++;
+            }
+            else if ((j - i) > 9) {
                 j++;
             }
         }
@@ -32,7 +35,7 @@ function Compression(s) {
     }
     return count;
 }
-let s =["a","b","b","b","b","b","b","b","b","b","b","b","b"]
+let s = ["a","a","b","b","c","c","c"]
 // Compressed:- ab2c10
 console.log(Compression(s));
 
