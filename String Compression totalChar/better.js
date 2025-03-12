@@ -1,12 +1,10 @@
-// Leetcode- 443
-
-function Compression(s) {
+function Compress(s) {
     let n = s.length;
     let count = 0;
     let i = 0;
     let j = 0;
     let curr = s[0];
-    while (j < n) {
+    while (j < n) {   // TC=O(n)
         if (s[j] == curr) {
             if ((j - i) == 0) {
                 count += 1;
@@ -35,7 +33,9 @@ function Compression(s) {
     }
     return count;
 }
-let s = ["a","a","b","b","c","c","c"]
+let s = ["a","b","b","c","c","c","c","c","c","c","c","c","c"]
 // Compressed:- ab2c10
-console.log(Compression(s));
+console.log(Compress(s));
 
+// TC=O(n)
+// SC=O(1)
