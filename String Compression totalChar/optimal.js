@@ -1,7 +1,7 @@
 function Compress(s) {
     let n = s.length;
     let idx = 0;
-    for (let i = 0; i < n;) {
+    for (let i = 0; i < n;) { //TC=O(n)
         let count = 0;
         let char = s[i];
         while (char == s[i] && i < n) {
@@ -23,3 +23,7 @@ function Compress(s) {
 let s = ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"]
 // Compressed:- ab2c10
 console.log(Compress(s));
+
+
+// TC=O(n)
+// SC=O(1)

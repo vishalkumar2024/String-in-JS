@@ -1,4 +1,8 @@
-// Leetcode- 443
+//This function compresses the string based on its occurence 
+// like for string- ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c",
+//  "c"];
+// Compressed:- ab2c10 &  result- 6
+// and returns the length of compressed string
 
 function Compression(s) {
     let n = s.length;
@@ -31,4 +35,4 @@ let s = ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"];
 console.log(Compression(s));
 
 // TC=O(n)+O(n) ~ O(n)
-// SC =O(n)
+// SC = O(n)
