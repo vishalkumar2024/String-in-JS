@@ -22,23 +22,15 @@
 // // TC=O(n)
 // // SC=O(n)
 
-function countPrimes(n) {
-    function isPrime(x) {
-        for (let i = 2; i < x; i++) {
-            if (x % i == 0) {
-                return false;
-            }
-        }
-        return true
+
+function roundToNearest(s) {
+    let rem =s%10;
+    // console.log(rem)
+    if (rem <= 5) {
+        return (s - rem)
     }
-    let count = 0;
-    for (let i = 2; i < n; i++) {
-        if (isPrime(i)) {
-            // console.log(i)
-            count++
-        }
+    else if (rem > 5) {
+        return s + (10 - rem)
     }
-    return count;
-};
-let n = 10;
-console.log(countPrimes(n));
+}
+console.log(roundToNearest(29))
