@@ -4,10 +4,10 @@
 function palindromicSubstring(s) {
     let n = s.length;
     function isPalindrome(str) {
-        let i=0;
-        let j=str.length-1;
-        while(i<=j){
-            if(str[i]!=str[j]){
+        let i = 0;
+        let j = str.length - 1;
+        while (i <= j) {    // TC=O(n/2)
+            if (str[i] != str[j]) {
                 return false
             }
             i++;
