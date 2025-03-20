@@ -18,7 +18,7 @@ function Compress(s) {
             }
         }
     }
-    return idx;
+    return s;
 }
 let s = ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"]
 // Compressed:- ab2c10

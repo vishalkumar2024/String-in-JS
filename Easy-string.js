@@ -24,13 +24,28 @@
 
 
 function roundToNearest(s) {
-    let rem =s%10;
+    let num = parseInt(s);
+    let rem =num%10;
     // console.log(rem)
     if (rem <= 5) {
-        return (s - rem)
+        return (num - rem).toString()
     }
     else if (rem > 5) {
-        return s + (10 - rem)
+        return num + (10 - rem).toString()
     }
 }
 console.log(roundToNearest(29))
+
+
+class Solution {
+  roundToNearest(s) {
+    let num = parseInt(s); // Convert string to number
+    let rem = num % 10; 
+
+    if (rem <= 5) {
+      return (num - rem).toString(); // Convert back to string
+    } else {
+      return (num + (10 - rem)).toString(); // Convert back to string
+    }
+  }
+}
