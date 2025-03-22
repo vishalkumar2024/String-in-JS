@@ -1,3 +1,4 @@
+// Leetcode 13
 function Roman(s) {
     function number(n) {
         if (n == "I") {
@@ -34,5 +35,8 @@ function Roman(s) {
     res += number(s[s.length - 1])
     return res;
 }
-let s = "XLIII"
+let s = "MCMXCIV"
 console.log(Roman(s));
+
+// TC=O(n)
+// sc=O(1)

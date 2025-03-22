@@ -9,9 +9,10 @@ function remaining(s, ch, count) {
             res += s[i];
         }
     }
-    return res
+    return res;
 }
 let s = "Thisisdemostring";
 ch = 'i';
 count = 3;
 console.log(remaining(s, ch, count));
+
