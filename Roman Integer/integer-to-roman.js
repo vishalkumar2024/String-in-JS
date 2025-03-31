@@ -13,19 +13,13 @@ function Roman(num) {
     map.set(5, "V")
     map.set(4, "IV")
     map.set(1, "I")
-    let s = "";
-    // for (let [key,value] of map) {
-    //     if (key <= num) {
-    //         num = num % key
-    //         s += value;
-    //     }
-    // }
+
+    let s = ""; 
     const entries = [...map.entries()];
     for (let i = 0; i < entries.length;) {
         if (entries[i][0] <= num) {
             let times=Math.floor(num/entries[i][0])
             num = num % entries[i][0]
-            // s += entries[i][1]*repeat(times);
             s += entries[i][1].repeat(times); 
         }
         else{
@@ -39,41 +33,7 @@ function Roman(num) {
 let num = 3749
 console.log(Roman(num));
 
-// Output: "MMMDCCXLIX"
+// TC=O(1) O(1) (Constant Time): Since the number of iterations is bounded and does not 
+// depend on num, the function runs in constant time.
 
-
-// function Roman(num) {
-//     let map = new Map([
-//         [1000, "M"],
-//         [900, "CM"],
-//         [500, "D"],
-//         [400, "CD"],
-//         [100, "C"],
-//         [90, "XC"],
-//         [50, "L"],
-//         [40, "XL"],
-//         [10, "X"],
-//         [9, "IX"],
-//         [5, "V"],
-//         [4, "IV"],
-//         [1, "I"]
-//     ]);
-
-//     let s = "";
-//     const entries = [...map.entries()];
-    
-//     for (let i = 0; i < entries.length;) {
-//         if (entries[i][0] <= num) {
-//             let times = Math.floor(num / entries[i][0]);
-//             num %= entries[i][0];
-//             s += entries[i][1].repeat(times);  // Use .repeat() instead of multiplication
-//         } else {
-//             i++;
-//         }
-//     }
-
-//     return s;
-// }
-
-// let num = 3749;
-// console.log(Roman(num));  // Output: "MMMDCCXLIX"
+// SC=O(1)
