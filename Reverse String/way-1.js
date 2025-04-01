@@ -25,5 +25,5 @@ function reverseString(s) {
 let s = "Hello World";
 console.log(reverseString(s));
 
-// TC=O(n)+O(n)+O(n)
-// SC=O(n)+O(n)
+// TC=O(n)+O(n)+O(n) ~ O(n)
+// SC=O(n)+O(n) ~ O(n)
