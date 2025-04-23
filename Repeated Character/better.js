@@ -17,7 +17,7 @@ function Repeat(s) {
     console.log(map)
 
     for(let [key,value] of map){
-        if(value==2){
+        if(value>=2){
             return key;
         }
     }

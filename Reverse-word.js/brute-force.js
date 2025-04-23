@@ -35,8 +35,7 @@ function reverseWord(s) {
     if (word != "") {
         sentence += reverse(word);
     }
-
-
+    
     return sentence.trim();  //TC=O(n)
 }
 s = "  The Real    World  ";

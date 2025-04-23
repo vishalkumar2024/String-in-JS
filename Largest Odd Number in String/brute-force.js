@@ -1,4 +1,4 @@
-
+// leetcode 1903
 function largestOddNumber(num) {
     let res = ""
     let longestRes="";
@@ -13,5 +13,9 @@ function largestOddNumber(num) {
     }
     return longestRes;
 };
+
 let num = "925346"
 console.log(largestOddNumber(num))
+
+// TC=O(n*n)
+// SC=O(n)
