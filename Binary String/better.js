@@ -15,4 +15,5 @@ function binary(s) {
 let s = "01101";
 console.log(binary(s));  
 
-// TC,SC=O(1) 
+// TC=O(n)
+// SC=O(1) 
