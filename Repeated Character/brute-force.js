@@ -1,3 +1,6 @@
+// Given a string consisting of lowercase english alphabets. Find the repeated 
+// character present first in the string.
+
 function repeat(str) {
     let n = str.length;
     for (let i = 0; i < n; i++) {  //TC=O(n)

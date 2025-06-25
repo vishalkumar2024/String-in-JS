@@ -18,7 +18,6 @@ function Compress(s) {
                 }
             }
             if ((j - i) === 9) {
-                console.log("object")
                 count += 1;
                 j++;
             }
