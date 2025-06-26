@@ -17,8 +17,8 @@ function minIdx(s1, s2) {
     }
     return -1;
 }
-s1 = "adcffaet";
-s2 = "onkl"
+s1 = "dcffaet";
+s2 = "raftaar"
 console.log(minIdx(s1, s2));
 
 // TC= O(n)+O(m) ~ O(n)
