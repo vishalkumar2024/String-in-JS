@@ -35,7 +35,7 @@ function Roman(s) {
     res += number(s[s.length - 1])
     return res;
 }
-let s = "MCMXCIV"
+let s = "IV"
 console.log(Roman(s));
 
 // TC=O(n)

@@ -1,6 +1,6 @@
 function Compress(s) {
     let n = s.length;
-    let idx = 0;
+    let res="";
     for (let i = 0; i < n;) { //TC=O(n)
         let count = 0;
         let char = s[i];
@@ -9,16 +9,16 @@ function Compress(s) {
             i++;
         }
 
-        s[idx++] = char;
+        res+= char;
 
         if (count > 1) {
             let cntString = count.toString();
             for (let digit of cntString) {
-                s[idx++] = digit; // Store each digit separately
+                res+=digit; // Store each digit separately
             }
         }
     }
-    return s;
+    return res.length;
 }
 let s = ["a", "b", "b", "c", "c", "c", "c", "c", "c", "c", "c", "c", "c"]
 // Compressed:- ab2c10
