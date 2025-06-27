@@ -5,6 +5,7 @@ function removeOccurrence(str, part) {
     function remove(str, part) {
         return str.replace(part, "");
     }
+    
     while (n > 0 && str.includes(part)) {
        str=  remove(str, part);
     }
